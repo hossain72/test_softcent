@@ -15,6 +15,9 @@ class DialogBoxProduct extends StatelessWidget {
     final width = Get.width;
     final height = Get.height;
     return AlertDialog(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(15.0),
+      ),
       contentPadding: const EdgeInsets.all(10),
       content: SizedBox(
         child: Column(
@@ -85,6 +88,7 @@ class DialogBoxProduct extends StatelessWidget {
                     ),
                     style: ElevatedButton.styleFrom(
                       primary: Colors.white,
+                      elevation: 0,
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20)),
                     ),
@@ -128,13 +132,14 @@ class DialogBoxProduct extends StatelessWidget {
             ElevatedButton(
                 onPressed: () {},
                 style: ElevatedButton.styleFrom(
+                  elevation: 0,
                   minimumSize: Size(width, 44),
                   primary: Colors.grey.shade100,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15)),
                 ),
                 child: const Text(
-                  "Follow",
+                  "View",
                   style: TextStyle(
                       fontSize: 14,
                       color: Colors.deepOrange,
