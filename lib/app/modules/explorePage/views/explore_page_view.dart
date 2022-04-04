@@ -25,7 +25,7 @@ class ExplorePageView extends GetView<ExplorePageController> {
             color: Colors.white,
             child: SingleChildScrollView(
                 child: Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: EdgeInsets.all(8.0),
               child: Column(
                 children: [
                   TypeAheadFormField(
@@ -33,7 +33,7 @@ class ExplorePageView extends GetView<ExplorePageController> {
                         keyboardType: TextInputType.text,
                         controller: controller.searchController,
                         decoration: InputDecoration(
-                          prefixIcon: const Padding(
+                          prefixIcon: Padding(
                             padding: EdgeInsets.only(left: 20),
                             child: Icon(
                               Icons.search,
@@ -44,18 +44,18 @@ class ExplorePageView extends GetView<ExplorePageController> {
                           hintText: "Search item",
                           fillColor: Colors.grey.shade200,
                           filled: true,
-                          hintStyle: const TextStyle(
+                          hintStyle: TextStyle(
                               fontSize: 14.0,
                               fontWeight: FontWeight.normal,
                               color: Colors.grey),
                           border: OutlineInputBorder(
-                              borderSide: const BorderSide(
-                                  color: Colors.grey, width: 1),
+                              borderSide:
+                                  BorderSide(color: Colors.grey, width: 1),
                               borderRadius: BorderRadius.circular(15)),
                           focusColor: Colors.white,
                           focusedBorder: OutlineInputBorder(
                             borderSide:
-                                const BorderSide(color: Colors.grey, width: 1),
+                                BorderSide(color: Colors.grey, width: 1),
                             borderRadius: BorderRadius.circular(15),
                           ),
                         )),
@@ -79,7 +79,7 @@ class ExplorePageView extends GetView<ExplorePageController> {
                     },
                     suggestionsCallback: (String pattern) => [],
                   ),
-                  const SizedBox(
+                  SizedBox(
                     height: 20,
                   ),
                   Divider(
@@ -91,13 +91,13 @@ class ExplorePageView extends GetView<ExplorePageController> {
                   ),
                   GridView.custom(
                     shrinkWrap: true,
-                    physics: const NeverScrollableScrollPhysics(),
+                    physics: NeverScrollableScrollPhysics(),
                     gridDelegate: SliverQuiltedGridDelegate(
                       crossAxisCount: 12,
                       mainAxisSpacing: 4,
                       crossAxisSpacing: 4,
                       //repeatPattern: QuiltedGridRepeatPattern.inverted,
-                      pattern: const [
+                      pattern: [
                         QuiltedGridTile(4, 4),
                         QuiltedGridTile(4, 4),
                         QuiltedGridTile(4, 4),

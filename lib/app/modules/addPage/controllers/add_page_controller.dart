@@ -1,7 +1,6 @@
 import 'package:get/get.dart';
 
 class AddPageController extends GetxController {
-  //TODO: Implement AddPageController
 
   final count = 0.obs;
   @override

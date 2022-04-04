@@ -13,7 +13,6 @@ import '../../explorePage/views/explore_page_view.dart';
 import '../controllers/main_page_controller.dart';
 
 class MainPageView extends GetView<MainPageController> {
-
   List<Widget> _buildScreens() {
     return [
       HomeView(),

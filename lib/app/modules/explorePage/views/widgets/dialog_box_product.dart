@@ -8,7 +8,7 @@ import '../../../../data/models/mobile_model.dart';
 class DialogBoxProduct extends StatelessWidget {
   final Product? product;
 
-  const DialogBoxProduct({Key? key, this.product}) : super(key: key);
+  DialogBoxProduct({this.product});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ class DialogBoxProduct extends StatelessWidget {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(15.0),
       ),
-      contentPadding: const EdgeInsets.all(10),
+      contentPadding: EdgeInsets.all(10),
       content: SizedBox(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -53,7 +53,7 @@ class DialogBoxProduct extends StatelessWidget {
                         ),
                       ),
                     ),
-                    const SizedBox(
+                    SizedBox(
                       width: 10,
                     ),
                     Column(
@@ -61,17 +61,17 @@ class DialogBoxProduct extends StatelessWidget {
                       children: [
                         Text(
                           product!.title.toString(),
-                          style: const TextStyle(
+                          style: TextStyle(
                               fontSize: 14,
                               color: Colors.black,
                               fontWeight: FontWeight.w700),
                         ),
-                        const SizedBox(
+                        SizedBox(
                           height: 5,
                         ),
                         Text(
                           product!.brand.toString(),
-                          style: const TextStyle(
+                          style: TextStyle(
                               fontSize: 12,
                               color: Colors.grey,
                               fontWeight: FontWeight.w400),
@@ -82,7 +82,7 @@ class DialogBoxProduct extends StatelessWidget {
                 ),
                 ElevatedButton.icon(
                     onPressed: () {},
-                    icon: const Icon(
+                    icon: Icon(
                       Icons.person_add_alt_1_rounded,
                       color: Colors.deepOrange,
                     ),
@@ -92,7 +92,7 @@ class DialogBoxProduct extends StatelessWidget {
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20)),
                     ),
-                    label: const Text(
+                    label: Text(
                       "Follow",
                       style: TextStyle(
                           fontSize: 14,
@@ -101,13 +101,13 @@ class DialogBoxProduct extends StatelessWidget {
                     ))
               ],
             ),
-            const SizedBox(
+            SizedBox(
               height: 20,
             ),
             ClipRRect(
               borderRadius: BorderRadius.circular(15),
               child: CachedNetworkImage(
-                height: height/3.5,
+                height: height / 3.5,
                 imageUrl: product!.thumbnail.toString(),
                 imageBuilder: (context, imageProvider) => Container(
                   decoration: BoxDecoration(
@@ -126,7 +126,7 @@ class DialogBoxProduct extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(
+            SizedBox(
               height: 20,
             ),
             ElevatedButton(
@@ -138,7 +138,7 @@ class DialogBoxProduct extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15)),
                 ),
-                child: const Text(
+                child: Text(
                   "View",
                   style: TextStyle(
                       fontSize: 14,
